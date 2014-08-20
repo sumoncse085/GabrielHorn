@@ -1,4 +1,4 @@
-package com.minibittechnologies.utility.tabhostanimationlisenar;
+package com.minibittechnologies.utility.tabhostanimationlistener;
 
 import com.minibittechnologies.R;
 

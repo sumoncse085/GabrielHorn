@@ -1,4 +1,4 @@
-package com.minibittechnologies.utility.tabhostanimationlisenar;
+package com.minibittechnologies.utility.tabhostanimationlistener;
 
 import android.support.v4.app.FragmentTabHost;
 import android.view.View;

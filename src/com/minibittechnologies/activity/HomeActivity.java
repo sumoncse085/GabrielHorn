@@ -31,8 +31,8 @@ import com.minibittechnologies.fragments.RewardsTabFragments;
 import com.minibittechnologies.fragments.ShareTabFragments;
 import com.minibittechnologies.fragments.TabFragment;
 import com.minibittechnologies.pageradapter.PagerAdapter;
-import com.minibittechnologies.utility.tabhostanimationlisenar.AnimatedTabHostListener;
-import com.minibittechnologies.utility.tabhostanimationlisenar.MyAnimTabHost;
+import com.minibittechnologies.utility.tabhostanimationlistener.AnimatedTabHostListener;
+import com.minibittechnologies.utility.tabhostanimationlistener.MyAnimTabHost;
 
 import android.annotation.SuppressLint;
 import android.app.ActivityManager;
