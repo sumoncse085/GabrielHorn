@@ -24,6 +24,7 @@ import com.teckfiesta.horn.R;
 import com.teckfiesta.horn.fragments.FragmentAccount;
 import com.teckfiesta.horn.fragments.FragmentMore;
 import com.teckfiesta.horn.fragments.FragmentOfferList;
+import com.teckfiesta.horn.fragments.FragmentShare;
 import com.teckfiesta.horn.fragments.MoreTabFragments;
 import com.teckfiesta.horn.fragments.OffersTabFragment;
 import com.teckfiesta.horn.fragments.RewardsTabFragments;
@@ -113,26 +114,40 @@ public class HomeActivity extends FragmentActivity {
 	String kkr;
 	int k=4;
 	TabWidget tabs;
-
-
-
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.main);
 		mTabHost=(TabHost) findViewById(android.R.id.tabhost);
 		mTabHost.setup();
+		tabs =tabs =(TabWidget) findViewById(android.R.id.tabs);
 		
-
+//		mTabHost.getChildAt(2).setOnClickListener(new OnClickListener() {
+//			
+//			@Override
+//			public void onClick(View v) {
+//				// TODO Auto-generated method stub
+//				
+//			}
+//		});
+		
+//		tabs.getChildTabViewAt(2).setOnClickListener(new OnClickListener() {
+//			
+//			@Override
+//			public void onClick(View v) {
+//				// TODO Auto-generated method stub
+//				
+//			}
+//		});
 		 TabHost.OnTabChangeListener tabChangeListener = new TabHost.OnTabChangeListener() {
 				
 				@Override
 				public void onTabChanged(String tabId) {
 					android.support.v4.app.FragmentManager fm =   getSupportFragmentManager();
-					RewardsTabFragments accountFragment = (RewardsTabFragments) fm.findFragmentByTag("RewardsTabFragments");
-					MoreTabFragments moreFragment = (MoreTabFragments) fm.findFragmentByTag("MoreTabFragments");
-					OffersTabFragment offerFragment = (OffersTabFragment) fm.findFragmentByTag("OffersTabFragment");
-					ShareTabFragments shareFragment = (ShareTabFragments) fm.findFragmentByTag("ShareTabFragments");
+					FragmentAccount accountFragment = (FragmentAccount) fm.findFragmentByTag("RewardsTabFragments");
+					FragmentMore moreFragment = (FragmentMore) fm.findFragmentByTag("MoreTabFragments");
+					FragmentOfferList offerFragment = (FragmentOfferList) fm.findFragmentByTag("OffersTabFragment");
+					FragmentShare shareFragment = (FragmentShare) fm.findFragmentByTag("ShareTabFragments");
 					android.support.v4.app.FragmentTransaction ft = fm.beginTransaction();
 					
 //					/** Detaches the androidfragment if exists */
@@ -150,36 +165,33 @@ public class HomeActivity extends FragmentActivity {
 //					}
 						
 					
+					
 					/** If current tab is android */
-					if(tabId.equalsIgnoreCase("RewardsTabFragments")){
+					
+					 if(tabId.equalsIgnoreCase("MoreTabFragments")){	
 						ft.setCustomAnimations(
-							R.anim.slide_in_right_toleft,R.anim.slide_out_leftright);
-					ft.replace(R.id.realtabcontent,new RewardsTabFragments(), "RewardsTabFragments");						
-						
-						
-					}
-					else if(tabId.equalsIgnoreCase("MoreTabFragments")){	
-						ft.setCustomAnimations(
-								R.anim.slide_in_left_to_right,R.anim.slide_out_leftright);
-						ft.replace(R.id.realtabcontent,new MoreTabFragments(), "MoreTabFragments");
-
+								R.anim.slide_out_rightleft,R.anim.slide_in_right_toleft);
+						ft.add(R.id.realtabcontent,new FragmentMore(), "MoreTabFragments");
 					}
 					else if(tabId.equalsIgnoreCase("OffersTabFragment")){	
 						ft.setCustomAnimations(
-								R.anim.slide_in_left_to_right,R.anim.slide_out_leftright);
-						ft.replace(R.id.realtabcontent,new OffersTabFragment(), "OffersTabFragment");
+								R.anim.slide_out_leftright,R.anim.slide_in_left_to_right);
+						ft.add(R.id.realtabcontent,new FragmentOfferList(), "OffersTabFragment");
 
 					}
-					
+					else if(tabId.equalsIgnoreCase("RewardsTabFragments")){
+						ft.setCustomAnimations(
+								
+							R.anim.slide_in_from_bottom,R.anim.slide_out_bottom);
+						
+					    ft.add(R.id.realtabcontent,new FragmentAccount(), "RewardsTabFragments");						
+					}
 					else if(tabId.equalsIgnoreCase("ShareTabFragments")){	
 						ft.setCustomAnimations(
-								R.anim.slide_in_left_to_right,R.anim.slide_out_leftright);
-						ft.replace(R.id.realtabcontent,new ShareTabFragments(), "ShareTabFragments");
+								R.anim.slide_in_from_bottom,R.anim.slide_out_bottom);
+						ft.replace(R.id.realtabcontent,new FragmentShare(), "ShareTabFragments");
 
 					}
-					
-					
-					
 					ft.commit();				
 				}
 			};
@@ -202,7 +214,7 @@ public class HomeActivity extends FragmentActivity {
 		Log.e("tag", "2");
 		//icon.setImageResource(R.drawable.rewards_tab);
 		//tSpecAndroid.setIndicator(tabIndicator);
-		tSpecAndroid.setIndicator("Offers",getResources().getDrawable(R.drawable.offer_tab));    
+		tSpecAndroid.setIndicator("",getResources().getDrawable(R.drawable.offer_tab));    
 		Log.e("tag", "3");
 		//tSpecAndroid.setContent(new DummyTabContent(HomeActivity.this));    
 		tSpecAndroid.setContent(new DummyTabContent(getBaseContext())); 
@@ -214,7 +226,7 @@ public class HomeActivity extends FragmentActivity {
 		tSpecAndroid = mTabHost.newTabSpec("RewardsTabFragments");
 		//icon.setImageResource(R.drawable.offer_tab);
 		//tSpecAndroid.setIndicator(tabIndicator);
-		tSpecAndroid.setIndicator("Rewards",getResources().getDrawable(R.drawable.rewards_tab));        
+		tSpecAndroid.setIndicator("",getResources().getDrawable(R.drawable.rewards_tab));        
 		tSpecAndroid.setContent(new DummyTabContent(getBaseContext())); 
 		mTabHost.addTab(tSpecAndroid);
 		
@@ -222,22 +234,39 @@ public class HomeActivity extends FragmentActivity {
 		tSpecAndroid = mTabHost.newTabSpec("ShareTabFragments");
 //		icon.setImageResource(R.drawable.share_tab);
 //		tSpecAndroid.setIndicator(tabIndicator);
-		tSpecAndroid.setIndicator("Share",getResources().getDrawable(R.drawable.share_tab));        
+		tSpecAndroid.setIndicator("",getResources().getDrawable(R.drawable.share_tab));        
 		tSpecAndroid.setContent(new DummyTabContent(getBaseContext()));  
 		mTabHost.addTab(tSpecAndroid);
 		
 		tSpecAndroid = mTabHost.newTabSpec("MoreTabFragments");
 //		icon.setImageResource(R.drawable.more_tab);
 //		tSpecAndroid.setIndicator(tabIndicator);
-		tSpecAndroid.setIndicator("More",getResources().getDrawable(R.drawable.more_tab));        
+		tSpecAndroid.setIndicator("",getResources().getDrawable(R.drawable.more_tab));        
 		tSpecAndroid.setContent(new DummyTabContent(getBaseContext()));      
 		mTabHost.addTab(tSpecAndroid);
+		//mTabHost.getTabWidget().setBackgroundColor(Color.parseColor("#F5F5F5"));
+		tabs.getChildAt(2).setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent sendIntent = new Intent();
+				sendIntent.setAction(Intent.ACTION_SEND);
+				sendIntent.putExtra(Intent.EXTRA_TEXT,
+						"Hey I am using SeatUnity. This is a nice app to store boarding pass and to communicate with seatmates.");
+				sendIntent.setType("text/plain");
+				startActivity(Intent.createChooser(sendIntent, "Share Via"));
 
+			}
+		});
+		tabs.getChildAt(0).setBackgroundResource(R.drawable.individual_tab);
+		tabs.getChildAt(1).setBackgroundResource(R.drawable.individual_tab);
+		tabs.getChildAt(2).setBackgroundResource(R.drawable.individual_tab);
+		tabs.getChildAt(3).setBackgroundResource(R.drawable.individual_tab);
 
 
 	}
 
-
+	
 
 
 //

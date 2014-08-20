@@ -17,8 +17,9 @@ public final class R {
         public static final int slide_in_right_toleft=0x7f040005;
         public static final int slide_out_bottom=0x7f040006;
         public static final int slide_out_leftright=0x7f040007;
-        public static final int slide_out_to_bottom=0x7f040008;
-        public static final int slide_out_to_top=0x7f040009;
+        public static final int slide_out_rightleft=0x7f040008;
+        public static final int slide_out_to_bottom=0x7f040009;
+        public static final int slide_out_to_top=0x7f04000a;
     }
     public static final class attr {
         /**  BELOW HERE ARE DEPRECEATED. DO NOT USE. 
@@ -174,26 +175,27 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int indicator_arrow=0x7f020007;
         public static final int indicator_bg_bottom=0x7f020008;
         public static final int indicator_bg_top=0x7f020009;
-        public static final int login=0x7f02000a;
-        public static final int mail=0x7f02000b;
-        public static final int more_tab=0x7f02000c;
-        public static final int moretab1=0x7f02000d;
-        public static final int moretab2=0x7f02000e;
-        public static final int offer_tab=0x7f02000f;
-        public static final int offertab1=0x7f020010;
-        public static final int offertab2=0x7f020011;
-        public static final int rewards=0x7f020012;
-        public static final int rewards_tab=0x7f020013;
-        public static final int rewardstab1=0x7f020014;
-        public static final int rewardstab2=0x7f020015;
-        public static final int rounded_login=0x7f020016;
-        public static final int share=0x7f020017;
-        public static final int share_tab=0x7f020018;
-        public static final int sharetab1=0x7f020019;
-        public static final int sharetab2=0x7f02001a;
-        public static final int top_logo=0x7f02001b;
-        public static final int toplogo=0x7f02001c;
-        public static final int website=0x7f02001d;
+        public static final int individual_tab=0x7f02000a;
+        public static final int login=0x7f02000b;
+        public static final int mail=0x7f02000c;
+        public static final int more_tab=0x7f02000d;
+        public static final int moretab1=0x7f02000e;
+        public static final int moretab2=0x7f02000f;
+        public static final int offer_tab=0x7f020010;
+        public static final int offertab1=0x7f020011;
+        public static final int offertab2=0x7f020012;
+        public static final int rewards=0x7f020013;
+        public static final int rewards_tab=0x7f020014;
+        public static final int rewardstab1=0x7f020015;
+        public static final int rewardstab2=0x7f020016;
+        public static final int rounded_login=0x7f020017;
+        public static final int share=0x7f020018;
+        public static final int share_tab=0x7f020019;
+        public static final int sharetab1=0x7f02001a;
+        public static final int sharetab2=0x7f02001b;
+        public static final int top_logo=0x7f02001c;
+        public static final int toplogo=0x7f02001d;
+        public static final int website=0x7f02001e;
     }
     public static final class id {
         public static final int backbuttonoftab=0x7f050011;

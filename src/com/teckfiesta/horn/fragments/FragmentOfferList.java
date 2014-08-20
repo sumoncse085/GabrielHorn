@@ -2,6 +2,7 @@ package com.teckfiesta.horn.fragments;
 
 import static com.nineoldandroids.view.ViewPropertyAnimator.animate;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -63,10 +64,14 @@ public class FragmentOfferList extends Fragment {
 	RelativeLayout re_top_top;
 	RelativeLayout re_top;
 	@SuppressLint("NewApi")
+	
+	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		Log.e("onCreate", "homeonCreate");
+		list=new ArrayList<>();
+		
 
 	}
 	@Override
@@ -76,31 +81,18 @@ public class FragmentOfferList extends Fragment {
 				container, false);
 		re_top=(RelativeLayout) v.findViewById(R.id.re_top);
 		re_top_top=(RelativeLayout) v.findViewById(R.id.re_top_top);
-
 		
-		list=new ArrayList<>();
-		loadarrlist();
-
-
-
 		list_view_latest_offer=(PullToRefreshListView) v.findViewById(R.id.list_view_latest_offer);
 		listviewforoffer=list_view_latest_offer.getRefreshableView();
 
-//		list_view_latest_offer.setOnRefreshListener(new OnRefreshListener<ListView>() {
-//			@Override
-//			public void onRefresh(PullToRefreshBase<ListView> refreshView) {
-//				loadarrlist();
-//			}
-//		});
-
-
+		loadarrlist();
 		listviewforoffer.setAdapter(adapter);
 		listviewforoffer.setOnItemClickListener(new OnItemClickListener() {
 
 			@Override
 			public void onItemClick(AdapterView<?> arg0, View arg1, int position,
 					long arg3) {
-				parent.StartSingleOfferFragment(list.get(position));
+			//	parent.StartSingleOfferFragment(list.get(position));
 			}
 		});
 		listviewforoffer.setOnScrollListener(new OnScrollListener() {
@@ -117,8 +109,7 @@ public class FragmentOfferList extends Fragment {
 				
 				 if(mLastFirstVisibleItem<firstVisibleItem)
 		            {
-					// Toast.makeText(getActivity(), "up "+firstVisibleItem, 300).show();
-		                Log.i("SCROLLING UP","TRUE");
+				     Log.i("SCROLLING UP","TRUE");
 		                if(firstVisibleItem!=0){
 							Log.i("Not visible",""+ firstVisibleItem);
 						

@@ -36,14 +36,11 @@ public class MoreTabFragments extends TabFragment{
 		View v = inflater.inflate(R.layout.fragment_tab3, container, false);
 		return v;
 	}
-
-	
 	public void onStart( ) {
 		Fragment fragment = backEndStack.peek();
 		FragmentManager fragmentManager = getChildFragmentManager();
 		FragmentTransaction fragmentTransaction = fragmentManager
 				.beginTransaction();
-		
 		fragmentTransaction.replace(R.id.tab3Content, fragment);
 		fragmentTransaction.commitAllowingStateLoss();
 		super.onStart();

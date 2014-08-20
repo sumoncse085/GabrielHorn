@@ -21,7 +21,7 @@
        >
         <activity
             android:name="com.teckfiesta.horn.activity.HomeActivity"
-             android:theme="@android:style/Theme.Black"
+            
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
