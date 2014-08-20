@@ -1,4 +1,4 @@
-package com.teckfiesta.horn.model;
+package com.minibittechnologies.model;
 
 public class OfferDetails {
   String title,message,img_url;

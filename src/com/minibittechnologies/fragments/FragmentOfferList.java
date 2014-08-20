@@ -1,4 +1,4 @@
-package com.teckfiesta.horn.fragments;
+package com.minibittechnologies.fragments;
 
 import static com.nineoldandroids.view.ViewPropertyAnimator.animate;
 
@@ -16,11 +16,11 @@ import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshBase.OnRefreshListener;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
 
-import com.teckfiesta.horn.MainActivity;
-import com.teckfiesta.horn.R;
-import com.teckfiesta.horn.activity.HomeActivity;
-import com.teckfiesta.horn.adapter.CustomAdapterForOfferDetails;
-import com.teckfiesta.horn.model.OfferDetails;
+import com.minibittechnologies.MainActivity;
+import com.minibittechnologies.R;
+import com.minibittechnologies.activity.HomeActivity;
+import com.minibittechnologies.adapter.CustomAdapterForOfferDetails;
+import com.minibittechnologies.model.OfferDetails;
 
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;

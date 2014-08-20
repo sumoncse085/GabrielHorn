@@ -1,8 +1,8 @@
-package com.teckfiesta.horn.fragments;
+package com.minibittechnologies.fragments;
 
 import java.util.Stack;
 
-import com.teckfiesta.horn.activity.HomeActivity;
+import com.minibittechnologies.activity.HomeActivity;
 
 
 

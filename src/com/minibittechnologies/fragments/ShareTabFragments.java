@@ -1,10 +1,10 @@
-package com.teckfiesta.horn.fragments;
+package com.minibittechnologies.fragments;
 
 import java.util.Stack;
 
-import com.teckfiesta.horn.R;
-import com.teckfiesta.horn.activity.HomeActivity;
-import com.teckfiesta.horn.utility.Constants;
+import com.minibittechnologies.R;
+import com.minibittechnologies.activity.HomeActivity;
+import com.minibittechnologies.utility.Constants;
 
 import android.content.Intent;
 import android.os.Bundle;

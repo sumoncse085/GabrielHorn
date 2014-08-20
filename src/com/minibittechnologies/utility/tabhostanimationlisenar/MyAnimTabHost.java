@@ -1,6 +1,6 @@
-package com.teckfiesta.horn.utility.tabhostanimationlisenar;
+package com.minibittechnologies.utility.tabhostanimationlisenar;
 
-import com.teckfiesta.horn.R;
+import com.minibittechnologies.R;
 
 import android.content.Context;
 import android.os.Bundle;

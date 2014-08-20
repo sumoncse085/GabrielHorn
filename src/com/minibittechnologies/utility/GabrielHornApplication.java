@@ -1,4 +1,4 @@
-package com.teckfiesta.horn.utility;
+package com.minibittechnologies.utility;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;

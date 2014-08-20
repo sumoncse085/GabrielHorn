@@ -1,9 +1,10 @@
-package com.teckfiesta.horn;
+package com.minibittechnologies;
 
 import java.util.ArrayList;
 
-import com.teckfiesta.horn.adapter.CustomAdapterForOfferDetails;
-import com.teckfiesta.horn.model.OfferDetails;
+import com.minibittechnologies.R;
+import com.minibittechnologies.adapter.CustomAdapterForOfferDetails;
+import com.minibittechnologies.model.OfferDetails;
 
 import android.app.Activity;
 import android.os.Bundle;

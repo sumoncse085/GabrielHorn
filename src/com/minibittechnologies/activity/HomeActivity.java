@@ -1,4 +1,4 @@
-package com.teckfiesta.horn.activity;
+package com.minibittechnologies.activity;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -20,19 +20,20 @@ import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.teckfiesta.horn.R;
-import com.teckfiesta.horn.fragments.FragmentAccount;
-import com.teckfiesta.horn.fragments.FragmentMore;
-import com.teckfiesta.horn.fragments.FragmentOfferList;
-import com.teckfiesta.horn.fragments.FragmentShare;
-import com.teckfiesta.horn.fragments.MoreTabFragments;
-import com.teckfiesta.horn.fragments.OffersTabFragment;
-import com.teckfiesta.horn.fragments.RewardsTabFragments;
-import com.teckfiesta.horn.fragments.ShareTabFragments;
-import com.teckfiesta.horn.fragments.TabFragment;
-import com.teckfiesta.horn.pageradapter.PagerAdapter;
-import com.teckfiesta.horn.utility.tabhostanimationlisenar.AnimatedTabHostListener;
-import com.teckfiesta.horn.utility.tabhostanimationlisenar.MyAnimTabHost;
+import com.minibittechnologies.R;
+import com.minibittechnologies.fragments.FragmentAccount;
+import com.minibittechnologies.fragments.FragmentMore;
+import com.minibittechnologies.fragments.FragmentOfferList;
+import com.minibittechnologies.fragments.FragmentShare;
+import com.minibittechnologies.fragments.MoreTabFragments;
+import com.minibittechnologies.fragments.OffersTabFragment;
+import com.minibittechnologies.fragments.RewardsTabFragments;
+import com.minibittechnologies.fragments.ShareTabFragments;
+import com.minibittechnologies.fragments.TabFragment;
+import com.minibittechnologies.pageradapter.PagerAdapter;
+import com.minibittechnologies.utility.tabhostanimationlisenar.AnimatedTabHostListener;
+import com.minibittechnologies.utility.tabhostanimationlisenar.MyAnimTabHost;
+
 import android.annotation.SuppressLint;
 import android.app.ActivityManager;
 import android.app.AlertDialog;

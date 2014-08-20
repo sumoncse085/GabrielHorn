@@ -1,4 +1,4 @@
-package com.teckfiesta.horn.fragments;
+package com.minibittechnologies.fragments;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,8 +9,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.teckfiesta.horn.R;
-import com.teckfiesta.horn.adapter.CustomAdapterForMore;
+import com.minibittechnologies.R;
+import com.minibittechnologies.adapter.CustomAdapterForMore;
 
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;

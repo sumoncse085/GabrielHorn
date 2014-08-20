@@ -1,4 +1,4 @@
-package com.teckfiesta.horn.activity;
+package com.minibittechnologies.activity;
 
 import android.content.Context;
 import android.view.View;

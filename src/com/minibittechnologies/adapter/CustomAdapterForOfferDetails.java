@@ -1,4 +1,4 @@
-package com.teckfiesta.horn.adapter;
+package com.minibittechnologies.adapter;
 
 import java.io.FileDescriptor;
 import java.io.PrintWriter;
@@ -10,8 +10,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.nostra13.universalimageloader.core.ImageLoader;
-import com.teckfiesta.horn.R;
-import com.teckfiesta.horn.model.OfferDetails;
+import com.minibittechnologies.R;
+import com.minibittechnologies.model.OfferDetails;
 
 
 

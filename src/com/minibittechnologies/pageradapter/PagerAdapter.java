@@ -1,4 +1,4 @@
-package com.teckfiesta.horn.pageradapter;
+package com.minibittechnologies.pageradapter;
  
 import java.util.List;
  

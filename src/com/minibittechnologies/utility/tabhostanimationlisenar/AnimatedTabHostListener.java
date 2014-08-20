@@ -1,4 +1,4 @@
-package com.teckfiesta.horn.utility.tabhostanimationlisenar;
+package com.minibittechnologies.utility.tabhostanimationlisenar;
 
 import android.support.v4.app.FragmentTabHost;
 import android.view.View;

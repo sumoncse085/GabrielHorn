@@ -1,9 +1,9 @@
-package com.teckfiesta.horn.fragments;
+package com.minibittechnologies.fragments;
 
 import java.util.Stack;
 
-import com.teckfiesta.horn.R;
-import com.teckfiesta.horn.activity.HomeActivity;
+import com.minibittechnologies.R;
+import com.minibittechnologies.activity.HomeActivity;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -18,13 +18,13 @@ import android.view.ViewParent;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class RewardsTabFragments extends TabFragment{
+public class MoreTabFragments extends TabFragment{
 	protected Stack<Fragment> backEndStack;
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		backEndStack = new Stack<Fragment>();
-		FragmentAccount initialFragment = new FragmentAccount();
+		FragmentMore initialFragment = new FragmentMore();
 		initialFragment.parent = this;
 		backEndStack.push(initialFragment);
 	}
@@ -36,18 +36,15 @@ public class RewardsTabFragments extends TabFragment{
 		View v = inflater.inflate(R.layout.fragment_tab3, container, false);
 		return v;
 	}
-
 	public void onStart( ) {
 		Fragment fragment = backEndStack.peek();
 		FragmentManager fragmentManager = getChildFragmentManager();
 		FragmentTransaction fragmentTransaction = fragmentManager
 				.beginTransaction();
-		
 		fragmentTransaction.replace(R.id.tab3Content, fragment);
 		fragmentTransaction.commitAllowingStateLoss();
 		super.onStart();
 	}
-
 	
 	public void clearr(){
 		backEndStack.pop();
