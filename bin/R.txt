@@ -118,7 +118,6 @@ int layout pull_to_refresh_header_horizontal 0x7f03000a
 int layout pull_to_refresh_header_vertical 0x7f03000b
 int layout tab_indicator 0x7f03000c
 int string app_name 0x7f070006
-int string hello_world 0x7f070007
 int string pull_to_refresh_from_bottom_pull_label 0x7f070003
 int string pull_to_refresh_from_bottom_refreshing_label 0x7f070005
 int string pull_to_refresh_from_bottom_release_label 0x7f070004
