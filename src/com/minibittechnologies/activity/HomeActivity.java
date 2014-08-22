@@ -26,7 +26,7 @@ import android.widget.TextView;
 import com.minibittechnologies.R;
 import com.minibittechnologies.fragments.FragmentAccount;
 import com.minibittechnologies.fragments.FragmentMore;
-import com.minibittechnologies.fragments.FragmentOfferList;
+import com.minibittechnologies.fragments.FragmentPostList;
 import com.minibittechnologies.fragments.FragmentShare;
 import com.minibittechnologies.fragments.TabFragment;
 
@@ -91,7 +91,7 @@ public class HomeActivity extends FragmentActivity {
 				android.support.v4.app.FragmentManager fm = getSupportFragmentManager();
 				FragmentAccount accountFragment = (FragmentAccount) fm.findFragmentByTag("RewardsTabFragments");
 				FragmentMore moreFragment = (FragmentMore) fm.findFragmentByTag("MoreTabFragments");
-				FragmentOfferList offerFragment = (FragmentOfferList) fm.findFragmentByTag("OffersTabFragment");
+				FragmentPostList offerFragment = (FragmentPostList) fm.findFragmentByTag("OffersTabFragment");
 				FragmentShare shareFragment = (FragmentShare) fm.findFragmentByTag("ShareTabFragments");
 				android.support.v4.app.FragmentTransaction ft = fm.beginTransaction();
 
@@ -116,7 +116,7 @@ public class HomeActivity extends FragmentActivity {
 					ft.add(R.id.realtabcontent, new FragmentMore(), "MoreTabFragments");
 				} else if (tabId.equalsIgnoreCase("OffersTabFragment")) {
 					ft.setCustomAnimations(R.anim.slide_out_leftright, R.anim.slide_in_left_to_right);
-					ft.add(R.id.realtabcontent, new FragmentOfferList(), "OffersTabFragment");
+					ft.add(R.id.realtabcontent, new FragmentPostList(), "OffersTabFragment");
 
 				} else if (tabId.equalsIgnoreCase("RewardsTabFragments")) {
 					ft.setCustomAnimations(
@@ -305,7 +305,8 @@ public class HomeActivity extends FragmentActivity {
 
 	@Override
 	public void onBackPressed() {
-		activeFragment.onBackPressed();
+		if (activeFragment != null)
+			activeFragment.onBackPressed();
 	}
 
 	public void close() {

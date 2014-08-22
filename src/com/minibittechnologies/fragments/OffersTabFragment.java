@@ -4,7 +4,7 @@ import java.util.Stack;
 
 import com.minibittechnologies.R;
 import com.minibittechnologies.activity.HomeActivity;
-import com.minibittechnologies.model.OfferDetails;
+import com.minibittechnologies.model.Post;
 import com.minibittechnologies.utility.Constants;
 
 import android.os.Bundle;
@@ -31,13 +31,13 @@ public class OffersTabFragment extends TabFragment{
 		super.onCreate(savedInstanceState);
 		trackcallhome=new Stack<Integer>();
 		backEndStack = new Stack<Fragment>();
-		FragmentOfferList initialFragment = new FragmentOfferList();
+		FragmentPostList initialFragment = new FragmentPostList();
 		initialFragment.parent = this;
 		trackcallhome.push(0);
 		backEndStack.push(initialFragment);
 		sBundle=savedInstanceState;
 	}
-	public void StartSingleOfferFragment(OfferDetails singleofferDetails) {
+	public void StartSingleOfferFragment(Post singleofferDetails) {
 		FragmentSingleOffer newFragment = new FragmentSingleOffer(singleofferDetails);
 		newFragment.parent = this;
 		FragmentManager fragmentManager = getChildFragmentManager();

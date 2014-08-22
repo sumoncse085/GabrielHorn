@@ -11,7 +11,7 @@ import org.json.JSONObject;
 
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.minibittechnologies.R;
-import com.minibittechnologies.model.OfferDetails;
+import com.minibittechnologies.model.Post;
 
 
 
